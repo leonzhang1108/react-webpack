@@ -1,4 +1,9 @@
 import React from 'react'
+import AsyncImport from 'router'
+const Hello = AsyncImport('components/Hello')
 export default () => (
-    <div>Page2</div>
+    <div>
+        <Hello/>
+        321
+    </div>
 )
