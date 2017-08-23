@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import AsyncImport from './router/router'
-
+import AsyncImport from 'router'
+import 'css/home'
 const App = () => (
   <Router >
     <div>
@@ -11,9 +11,9 @@ const App = () => (
         <li><Link to="/page2">Page2</Link></li>
       </ul>
 
-      <Route exact path="/" component={AsyncImport('Home')} />
-      <Route path="/page1" component={AsyncImport('Page1')} />
-      <Route path="/page2" component={AsyncImport('Page2')} />
+      <Route exact path="/" component={AsyncImport('pages/Home')} />
+      <Route path="/page1" component={AsyncImport('pages/Page1')} />
+      <Route path="/page2" component={AsyncImport('pages/Page2')} />
     </div>
   </Router>
 )

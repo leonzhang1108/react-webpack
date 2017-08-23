@@ -1,5 +1,6 @@
 import React from 'react'
 import Loading from '../components/Loading'
+import path from 'path'
 const asyncComponent = (getComponent) => {
   return class AsyncComponent extends React.Component {
     constructor(props) {
@@ -23,6 +24,6 @@ const asyncComponent = (getComponent) => {
 
 export default (PageName) => {
   return asyncComponent(() =>
-    System.import(`../pages/${PageName}`).then(module => module.default)
+    System.import(`../${PageName}`).then(module => module.default)
   )
 }

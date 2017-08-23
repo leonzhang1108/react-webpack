@@ -2,6 +2,8 @@ var webpack = require('webpack')
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var URL = require('../static/constants')
+var path = require('path')
+var src = path.join(__dirname, '..' , 'src')
 module.exports = {
   entry: {
     bundle: './index.js',
@@ -20,6 +22,10 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      }, {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
       }
     ]
   },
@@ -37,7 +43,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.css'],
     alias: {
-      css: `${__dirname}/src/style`
+      css: path.join(src, 'style'),
+      components: path.join(src, 'components'),
+      pages: path.join(src, 'pages'),
+      router: path.join(src, 'router')
     }
   }
 }
