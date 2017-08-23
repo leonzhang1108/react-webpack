@@ -1,6 +1,6 @@
 import React from 'react'
 import Loading from '../components/Loading'
-const asyncComponent =(getComponent) => {
+const asyncComponent = (getComponent) => {
   return class AsyncComponent extends React.Component {
     constructor(props) {
       super(props)
@@ -9,11 +9,10 @@ const asyncComponent =(getComponent) => {
       }
     }
     componentWillMount() {
-      if (!this.state.Component) {
-        getComponent().then(Component => {
-          this.setState({ Component })
-        })
-      }
+      if (this.state.Component) return
+      getComponent().then(Component => {
+        this.setState({ Component })
+      })
     }
     render() {
       const { Component } = this.state
