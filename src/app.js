@@ -1,12 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Home from './pages/Home'
-import Page1 from './pages/Page1'
-import Page2 from './pages/Page2'
-
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import AsyncImport from './router/router'
 
 const App = () => (
-  <Router>
+  <Router >
     <div>
       <ul>
         <li><Link to="/">Home</Link></li>
@@ -14,11 +11,9 @@ const App = () => (
         <li><Link to="/page2">Page2</Link></li>
       </ul>
 
-      <hr />
-
-      <Route exact path="/" component={Home} />
-      <Route path="/page1" component={Page1} />
-      <Route path="/page2" component={Page2} />
+      <Route exact path="/" component={AsyncImport('Home')} />
+      <Route path="/page1" component={AsyncImport('Page1')} />
+      <Route path="/page2" component={AsyncImport('Page2')} />
     </div>
   </Router>
 )
