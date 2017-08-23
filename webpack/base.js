@@ -1,17 +1,16 @@
 var webpack = require('webpack')
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var URL = require('../static/constants')
 module.exports = {
   entry: {
     bundle: './index.js',
     vendor: ['react', 'react-dom', 'react-router', 'react-router-dom']
   },
   output: {
-    path: __dirname + "/dist",
+    path: URL.dist,
     filename: "[hash:8].[name].js"
   },
-  // 监听打包
-  // watch: true,
   module: {
     loaders: [
       {

@@ -1,18 +1,16 @@
-const devModule = require('./webpack/dev');
-const prodModule = require('./webpack/prod');
-let finalModule = {};
+const devModule = require('./webpack/dev')
+const prodModule = require('./webpack/prod')
+let finalModule = {}
 
-let ENV = process.env.NODE_ENV;
-
-switch (ENV) {
+switch (process.env.NODE_ENV) {
   case 'dev':
-    finalModule = devModule;
-    break;
+    finalModule = devModule
+    break
   case 'prod':
-    finalModule = prodModule;
-    break;
+    finalModule = prodModule
+    break
   default:
-    break;
+    break
 }
  
-module.exports = finalModule;
+module.exports = finalModule
