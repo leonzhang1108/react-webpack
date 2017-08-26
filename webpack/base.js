@@ -24,8 +24,7 @@ module.exports = {
         }
       }, {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
+        loader: ['style-loader', 'css-loader']
       }
     ]
   },
@@ -41,7 +40,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js', '.css'],
+    extensions: ['.css', '.js'],
     alias: {
       css: path.join(src, 'style'),
       components: path.join(src, 'components'),
