@@ -20,13 +20,13 @@ class App extends React.Component {
             <div className="logo" />
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
               <Menu.Item key="1">
-                <Link to="/"><Icon type="user" />Home</Link>
+                <Link to="/" replace><Icon type="user" />Home</Link>
               </Menu.Item>
               <Menu.Item key="2">
-                <Link to="/page1"><Icon type="video-camera" />Page1</Link>
+                <Link to="/page1" replace><Icon type="video-camera" />Page1</Link>
               </Menu.Item>
               <Menu.Item key="3">
-                <Link to="/page2"><Icon type="upload" />Page2</Link>
+                <Link to="/page2" replace><Icon type="upload" />Page2</Link>
               </Menu.Item>
             </Menu>
           </Sider>
