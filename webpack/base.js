@@ -21,7 +21,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', 'stage-1']
         }
       }, {
         test: /\.css$/,
@@ -48,10 +48,11 @@ module.exports = {
   resolve: {
     extensions: ['.css', '.js'],
     alias: {
+      src: src,
       css: path.join(src, 'style'),
       components: path.join(src, 'components'),
       pages: path.join(src, 'pages'),
-      router: path.join(src, 'router')
+      asyncImport: path.join(src, 'asyncImport')
     }
   }
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import Loading from '../components/Loading'
-import path from 'path'
 const asyncComponent = (getComponent) => {
   return class AsyncComponent extends React.Component {
     constructor(props) {

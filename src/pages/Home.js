@@ -1,5 +1,9 @@
-import React from 'react'
-import 'css/home.css'
+import React, { Component } from 'react';
+
+
+
 export default () => (
-    <div>Home</div>
+    <div>
+        this is home
+    </div>
 )

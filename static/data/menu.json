@@ -1,0 +1,17 @@
+{
+  "menus": [
+    {
+      "name": "home",
+      "component": "Home",
+      "parent": "sub1"
+    }, {
+      "name": "page1",
+      "component": "Page1",
+      "parent": "sub1"
+    }, {
+      "name": "page2",
+      "component": "Page2",
+      "parent": "sub2"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 import React from 'react'
-import AsyncImport from 'router'
+import AsyncImport from 'asyncImport'
 const Hello = AsyncImport('components/Hello')
 export default () => (
     <div>
         <Hello/>
-        321
+        page222
     </div>
 )
